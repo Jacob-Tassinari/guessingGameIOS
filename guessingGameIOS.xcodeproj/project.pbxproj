@@ -13,6 +13,7 @@
 		86517D4E216CFCD700755E6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86517D4D216CFCD700755E6B /* Assets.xcassets */; };
 		86517D51216CFCD700755E6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86517D4F216CFCD700755E6B /* LaunchScreen.storyboard */; };
 		86517D5B216F9AC100755E6B /* selectdiffriculty.viewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86517D5A216F9AC100755E6B /* selectdiffriculty.viewcontroller.swift */; };
+		86517D5D2174008300755E6B /* customViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86517D5C2174008300755E6B /* customViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		86517D50216CFCD700755E6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86517D52216CFCD700755E6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86517D5A216F9AC100755E6B /* selectdiffriculty.viewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectdiffriculty.viewcontroller.swift; sourceTree = "<group>"; };
+		86517D5C2174008300755E6B /* customViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				86517D46216CFCD500755E6B /* AppDelegate.swift */,
-				86517D48216CFCD500755E6B /* ViewController.swift */,
+				86517D5C2174008300755E6B /* customViewController.swift */,
 				86517D5A216F9AC100755E6B /* selectdiffriculty.viewcontroller.swift */,
+				86517D48216CFCD500755E6B /* ViewController.swift */,
 				86517D4A216CFCD500755E6B /* Main.storyboard */,
 				86517D4D216CFCD700755E6B /* Assets.xcassets */,
 				86517D4F216CFCD700755E6B /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				86517D5B216F9AC100755E6B /* selectdiffriculty.viewcontroller.swift in Sources */,
 				86517D49216CFCD500755E6B /* ViewController.swift in Sources */,
 				86517D47216CFCD500755E6B /* AppDelegate.swift in Sources */,
+				86517D5D2174008300755E6B /* customViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

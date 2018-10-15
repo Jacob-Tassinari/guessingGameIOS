@@ -61,8 +61,8 @@ class ViewController: UIViewController {
         }
         if guesses == 1 {
             highlow.text = "You lose..."
+            guessesRemaining.text = "The number was \(randomNumber)"
             setupUIForRestart()
-
             return
         }
             

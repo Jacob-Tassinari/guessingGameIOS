@@ -18,8 +18,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Diffriculty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyr-vH-oNm">
-                                <rect key="frame" x="121" y="46" width="140.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="121" y="46" width="152" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -66,6 +66,9 @@
                                         <state key="normal" title="Custom">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="CEW-nZ-5oU" kind="show" id="Bfh-7g-x9x"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -86,6 +89,139 @@
             </objects>
             <point key="canvasLocation" x="-831" y="134"/>
         </scene>
+        <!--Custom View Controller-->
+        <scene sceneID="734-Kz-6gf">
+            <objects>
+                <viewController storyboardIdentifier="customViewController" id="CEW-nZ-5oU" customClass="customViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uus-lC-hKT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="zO8-Mg-ZPd">
+                                <rect key="frame" x="47" y="32" width="281.5" height="467.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ige-IQ-NV4">
+                                        <rect key="frame" x="0.0" y="0.0" width="281.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="196" translatesAutoresizingMaskIntoConstraints="NO" id="ZiH-UB-vFd">
+                                        <rect key="frame" x="0.0" y="75.5" width="281.5" height="24"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXN-RZ-Pwg">
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hr2-D2-Hvq">
+                                                <rect key="frame" x="260" y="0.0" width="21.5" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From has to be less than To 😤" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TsO-0P-pjI" userLabel="labelForMinMax">
+                                        <rect key="frame" x="0.0" y="118" width="281.5" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="91" translatesAutoresizingMaskIntoConstraints="NO" id="9tf-3Q-Iwi">
+                                        <rect key="frame" x="0.0" y="136.5" width="281.5" height="48"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="Gst-XC-yU4" userLabel="minTextField">
+                                                <rect key="frame" x="0.0" y="0.0" width="43.5" height="48"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUR-5Z-Kb9">
+                                                <rect key="frame" x="134.5" y="0.0" width="18.5" height="48"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="natural" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="e87-0U-CqS" userLabel="maxTextField">
+                                                <rect key="frame" x="244" y="0.0" width="37.5" height="48"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guesses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4D-nw-k7H">
+                                        <rect key="frame" x="0.0" y="221.5" width="281.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guesses has to be greater than 0 😑" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXU-QU-bTM" userLabel="labelForGuesses">
+                                        <rect key="frame" x="0.0" y="264" width="281.5" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="Jfn-tS-gc0" userLabel="guessTextField">
+                                        <rect key="frame" x="0.0" y="290" width="281.5" height="33"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="please input numbers ⇧😡" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vls-fq-gYw" userLabel="labelForNumberChecking">
+                                        <rect key="frame" x="0.0" y="341.5" width="281.5" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QzA-31-uoM" userLabel="checkButton">
+                                        <rect key="frame" x="0.0" y="364.5" width="281.5" height="30"/>
+                                        <state key="normal" title="Check my setup"/>
+                                        <connections>
+                                            <action selector="checkTapped:" destination="CEW-nZ-5oU" eventType="touchUpInside" id="bj5-9H-5Ze"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8x-Ff-el0" userLabel="goOnButton">
+                                        <rect key="frame" x="0.0" y="413" width="281.5" height="0.0"/>
+                                        <state key="normal" title="Go on to play 🎲"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="cudtomSegue" id="Bsd-CA-ssf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdv-2K-xdi">
+                                        <rect key="frame" x="0.0" y="437.5" width="281.5" height="30"/>
+                                        <state key="normal" title="Go back to the diffriculty menu 🔙"/>
+                                        <connections>
+                                            <segue destination="cEg-k8-sYq" kind="show" id="cvV-g3-DNC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zO8-Mg-ZPd" firstAttribute="top" secondItem="Lst-dm-eyE" secondAttribute="top" constant="12" id="23z-Df-8FB"/>
+                            <constraint firstItem="zO8-Mg-ZPd" firstAttribute="centerX" secondItem="uus-lC-hKT" secondAttribute="centerX" id="BYa-JV-5cR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lst-dm-eyE"/>
+                    </view>
+                    <connections>
+                        <outlet property="checkButton" destination="QzA-31-uoM" id="Qi0-dK-NPh"/>
+                        <outlet property="goOnButton" destination="J8x-Ff-el0" id="2Gi-8x-2Sr"/>
+                        <outlet property="guessTextField" destination="Jfn-tS-gc0" id="7A2-W3-ioY"/>
+                        <outlet property="labelForGuesses" destination="lXU-QU-bTM" id="Rpl-YW-Hf5"/>
+                        <outlet property="labelForMinMax" destination="TsO-0P-pjI" id="wSS-WQ-thH"/>
+                        <outlet property="labelForNumberChecking" destination="vls-fq-gYw" id="WyU-nA-9ix"/>
+                        <outlet property="maxTextField" destination="e87-0U-CqS" id="zrS-uj-s6S"/>
+                        <outlet property="minTextField" destination="Gst-XC-yU4" id="UCZ-OY-RFY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FHb-Xa-Ojb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-103.2" y="133.5832083958021"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -95,28 +231,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="WIa-os-MLN">
-                                <rect key="frame" x="94" y="40" width="187.5" height="370"/>
+                                <rect key="frame" x="70" y="40" width="235" height="384.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guessing Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ei-G9-owh">
-                                        <rect key="frame" x="19.5" y="0.0" width="148.5" height="24"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="235" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFe-TV-HMu">
-                                        <rect key="frame" x="68.5" y="54" width="50" height="50"/>
+                                        <rect key="frame" x="92.5" y="68.5" width="50" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="Cme-wn-Swf">
-                                        <rect key="frame" x="67" y="134" width="53.5" height="64"/>
+                                        <rect key="frame" x="91" y="148.5" width="53.5" height="64"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdn-vP-aQp">
-                                        <rect key="frame" x="57.5" y="228" width="72" height="41"/>
+                                        <rect key="frame" x="81.5" y="242.5" width="72" height="41"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <state key="normal" title="Guess"/>
                                         <connections>
@@ -124,26 +260,26 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="guess a number 🤔" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGX-eq-yQk">
-                                        <rect key="frame" x="18.5" y="299" width="150" height="20.5"/>
+                                        <rect key="frame" x="42.5" y="313.5" width="150" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 Guesses remaining 👀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhi-1g-CRg">
-                                        <rect key="frame" x="0.0" y="349.5" width="187.5" height="20.5"/>
+                                        <rect key="frame" x="24" y="364" width="187.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3E-AF-cuE">
-                                        <rect key="frame" x="58.5" y="370" width="70" height="0.0"/>
+                                        <rect key="frame" x="82.5" y="384.5" width="70" height="0.0"/>
                                         <state key="normal" title="Play again"/>
                                         <connections>
                                             <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b0Y-OT-Cek"/>
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20u-hi-n2a">
-                                        <rect key="frame" x="38.5" y="370" width="110" height="0.0"/>
+                                        <rect key="frame" x="62.5" y="384.5" width="110" height="0.0"/>
                                         <state key="normal" title="Diffriculty Menu"/>
                                         <connections>
                                             <segue destination="cEg-k8-sYq" kind="show" identifier="diffricultyMenu" id="E3o-ey-yFa"/>
@@ -171,10 +307,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="614" y="134"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FUI-wi-8vg"/>
+        <segue reference="Bsd-CA-ssf"/>
+        <segue reference="cvV-g3-DNC"/>
     </inferredMetricsTieBreakers>
 </document>
