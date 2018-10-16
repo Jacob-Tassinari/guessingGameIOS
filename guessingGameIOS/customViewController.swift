@@ -33,9 +33,10 @@ class customViewController: UIViewController{
     @IBOutlet var checkButton: UIButton!
     @IBOutlet var goOnButton: UIButton!
     
-    
-    
-    
+    //mark: setup properties
+    var minchecked:Int = 0
+    var maxchecked:Int = 0
+    var guesseschecked:Int = 0
     
     //mark: setup ui protecion setting up the guessing game
     @IBAction func checkTapped(_ sender: Any) {
@@ -48,6 +49,7 @@ class customViewController: UIViewController{
             labelForNumberChecking.isHidden = false
             return
         }
+        labelForNumberChecking.isHidden = true
         guard let max = Int(maxInput) else {
             labelForNumberChecking.isHidden = false
             return
@@ -82,10 +84,7 @@ class customViewController: UIViewController{
             guesseschecked = guess
         }
     }
-    //mark: setup properties
-    var minchecked = 1
-    var maxchecked = 100
-    var guesseschecked = 5
+    
     
     //mark: run segue setup
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
