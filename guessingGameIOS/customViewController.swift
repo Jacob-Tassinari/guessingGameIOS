@@ -12,52 +12,60 @@ import UIKit
 class customViewController: UIViewController{
     
     //mark: outlets
-
-
+    @IBOutlet var labelForMinMax: UILabel!// to give feeback to the player why the input won't work
     
-    
-//    @IBOutlet weak var minTextField: UILabel!
-//    @IBOutlet weak var maxTextField: UILabel!
-//    @IBOutlet weak var guessTextField: UITextField!
-//    @IBOutlet weak var goOnButton: UIButton!
-//    @IBOutlet weak var checkButton: UIButton!
-//    @IBOutlet weak var labelForNumberChecking: UILabel!
-//    @IBOutlet weak var labelForMinMax: UILabel!
-//    @IBOutlet weak var labelForGuesses: UILabel!
-    @IBOutlet var labelForMinMax: UILabel!
     @IBOutlet var minTextField: UITextField!
+    
     @IBOutlet var maxTextField: UITextField!
-    @IBOutlet var labelForGuesses: UILabel!
-    @IBOutlet var guessTextField: UITextField!
-    @IBOutlet var labelForNumberChecking: UILabel!
-    @IBOutlet var checkButton: UIButton!
-    @IBOutlet var goOnButton: UIButton!
+    
+    @IBOutlet var labelForGuesses: UILabel!// to give feeback to the player why the input won't work!
+    
+    @IBOutlet var guessTextField: UITextField! // to take
+    
+    @IBOutlet var labelForNumberChecking: UILabel!// to give feeback to the player why the input won't work
+    
+    @IBOutlet var checkButton: UIButton!// to hide the button
+    
+    @IBOutlet var goOnButton: UIButton! // to show the game page
     
     //mark: setup properties
-    var minchecked:Int = 0
-    var maxchecked:Int = 0
-    var guesseschecked:Int = 0
+    var minchecked:Int = 0 // to throw it into the prepare for segue func
+    var maxchecked:Int = 0// to throw it into the prepare for segue func
+    var guesseschecked:Int = 0// to throw it into the prepare for segue func
     
     //mark: setup ui protecion setting up the guessing game
     @IBAction func checkTapped(_ sender: Any) {
+        //to run the if statement at the end of this func
         var minmax:Bool = false
         var guesses:Bool = false
+        
+        // to be able to use the text boxs
         let minInput = minTextField.text!
         let maxInput = maxTextField.text!
         let guessesInput = guessTextField.text!
+        
+        //checking if its a number
         guard let min = Int(minInput) else {
             labelForNumberChecking.isHidden = false
             return
         }
-        labelForNumberChecking.isHidden = true
+        labelForNumberChecking.isHidden = true // to re hide the label once they are all hidden
+        
+        //checking if its a number
         guard let max = Int(maxInput) else {
             labelForNumberChecking.isHidden = false
             return
         }
+        labelForNumberChecking.isHidden = true // to re hide the label once they are all hidden
+        
+        //checking if its a number
         guard let guess = Int(guessesInput) else {
             labelForNumberChecking.isHidden = false
             return
         }
+        labelForNumberChecking.isHidden = true // to re hide the label once they are all hidden
+        
+        //check if min is less than the max
         if min <  max {
             minmax = true
             labelForMinMax.isHidden = true
@@ -65,6 +73,8 @@ class customViewController: UIViewController{
             labelForMinMax.isHidden = false
             return
         }
+        
+        // to check if the amount of guesses is greater than zero
         if guess > 0  {
             guesses = true
             labelForGuesses.isHidden = true
@@ -73,6 +83,7 @@ class customViewController: UIViewController{
             return
         }
         
+        //run the setup to send the values that the user gave and put it into the guessing game code
         if guesses && minmax {
             goOnButton.isHidden = false
             minTextField.isEnabled = false
@@ -94,7 +105,7 @@ class customViewController: UIViewController{
             guessingGameViewControlller.min = minchecked
             guessingGameViewControlller.max = maxchecked
             guessingGameViewControlller.guesses = guesseschecked
-            guessingGameViewControlller.setOfGuesses = guesseschecked
+            guessingGameViewControlller.setOfGuesses = guesseschecked// for restart
             break
         default :
             break

@@ -12,61 +12,70 @@ class ViewController: UIViewController {
     
     
     
-    //mark:
-    @IBOutlet weak var playAgainButton: UIButton!
-    @IBAction func playAgain(_ sender: Any) {
+    //mark: outlets
+    @IBOutlet weak var playAgainButton: UIButton! // used to make the button hide and come back
+    
+    @IBOutlet weak var promt: UILabel! // to change the text for the min and max
+    
+    @IBOutlet weak var textfield: UITextField! // to take a aguess and run it through the program
+    
+    @IBOutlet weak var button: UIButton! // to actually submit the guess into the code
+    
+    @IBOutlet weak var highlow: UILabel! // it is the responding to the guesss given  high, low, win, and lose
+    
+    @IBOutlet weak var guessesRemaining: UILabel! // to tell how many guesses left
+    
+    @IBOutlet weak var diffrocultyButton: UIButton! // to send used to us back to the first screen
+    
+    //marK: oulets func
+    @IBAction func playAgain(_ sender: Any) { // used to instance the restart func
         restarT()
     }
-    @IBOutlet weak var promt: UILabel!
-    @IBOutlet weak var textfield: UITextField!
-    @IBOutlet weak var button: UIButton!
-    @IBOutlet weak var highlow: UILabel!
-    @IBOutlet weak var guessesRemaining: UILabel!
-    @IBOutlet weak var diffrocultyButton: UIButton!
-    
-    //marK:
-    @IBAction func buttonwhentapped(_ sender: Any) {
+    @IBAction func buttonwhentapped(_ sender: Any) { // to test if they gave us a number
         let userInput = textfield.text!
         guard let guess = Int(userInput) else {
             highlow.text = "You didn't give me a number."
             return
         }
-        makeAGuess(guess)
+        makeAGuess(guess) // running the actual guessing game code
     }
     
-    //mark propteries
+    //mark: orginal propteries
     var randomNumber = Int.random(in: 1...100)
     var guesses = 5
     var min = 1
     var max = 100
-    var setOfGuesses = 5
+    var setOfGuesses = 5// for the restart func
     
     //mark:
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // so when you start the game it dosen't set it straight to just 1 - 100 - 5 and actually sends it with the right number of guesses, min, and max
         promt.text = "Please enter a number between \(min) - \(max)"
         guessesRemaining.text = "\(guesses) Guesses remaining 👀"
     }
-    //mark
+    //mark" actual code for the game
     func makeAGuess(_ guess: Int) {
-        guard guess >= min && guess <= max else {
+        randomNumber = Int.random(in: min...max)// so it doesn't start out  1 - 100
+        
+        guard guess >= min && guess <= max else { // making sure its in the bonds of the game
             highlow.text = "Your number is not between \(min) and \(max)"
             return
         }
-        if guess == randomNumber {
+        if guess == randomNumber { // if you guess it in time
             highlow.text = "You win!"
-            setupUIForRestart()
+            guessesRemaining.text = "You guessed the right number 🤯"
+            setupUIForRestart()// ui restart setup instance
             return
         }
-        if guesses == 1 {
+        if guesses == 1 { // if you run out of guesses
             highlow.text = "You lose..."
             guessesRemaining.text = "The number was \(randomNumber)"
-            setupUIForRestart()
+            setupUIForRestart()// ui restart setup instance
             return
         }
             
-        if guess < randomNumber {
+        if guess < randomNumber { // runs the high low label to give feeback to the player
             highlow.text = "Your guess is too low"
         }else {
             highlow.text = "Your guess is too high"
@@ -75,14 +84,13 @@ class ViewController: UIViewController {
         guessesRemaining.text = "\(guesses) Guesses remaining 👀"
         
     }
-    func setupUIForRestart() {
+    func setupUIForRestart() { // to hide  and disenable buttons and also open buttons for restart
         textfield.isEnabled = false
         button.isHidden = true
         playAgainButton.isHidden = false
-        guessesRemaining.text = " No Guesses remaining"
         diffrocultyButton.isHidden = false
     }
-    func restarT() {
+    func restarT() {// to actually restart the code
         // new random number
         randomNumber = Int.random(in: min...max)
         // reset guesses remaining
