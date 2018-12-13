@@ -283,8 +283,8 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20u-hi-n2a">
-                                        <rect key="frame" x="62.5" y="384.5" width="110" height="0.0"/>
-                                        <state key="normal" title="Diffriculty Menu"/>
+                                        <rect key="frame" x="65.5" y="384.5" width="104" height="0.0"/>
+                                        <state key="normal" title="Difficulty Menu"/>
                                         <connections>
                                             <segue destination="cEg-k8-sYq" kind="show" identifier="diffricultyMenu" id="E3o-ey-yFa"/>
                                         </connections>
