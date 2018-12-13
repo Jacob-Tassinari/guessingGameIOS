@@ -37,6 +37,7 @@ class ViewController: UIViewController {
             highlow.text = "You didn't give me a number."
             return
         }
+        print(randomNumber)
         makeAGuess(guess) // running the actual guessing game code
     }
     
@@ -53,10 +54,11 @@ class ViewController: UIViewController {
         // so when you start the game it dosen't set it straight to just 1 - 100 - 5 and actually sends it with the right number of guesses, min, and max
         promt.text = "Please enter a number between \(min) - \(max)"
         guessesRemaining.text = "\(guesses) Guesses remaining 👀"
+        restarT()
     }
     //mark" actual code for the game
     func makeAGuess(_ guess: Int) {
-        randomNumber = Int.random(in: min...max)// so it doesn't start out  1 - 100
+//        randomNumber = Int.random(in: min...max)// so it doesn't start out  1 - 100
         
         guard guess >= min && guess <= max else { // making sure its in the bonds of the game
             highlow.text = "Your number is not between \(min) and \(max)"

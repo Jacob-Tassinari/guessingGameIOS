@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cEg-k8-sYq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cEg-k8-sYq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Diffriculty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyr-vH-oNm">
-                                <rect key="frame" x="121" y="46" width="152" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a difficulty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyr-vH-oNm">
+                                <rect key="frame" x="116" y="46" width="143.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -76,8 +76,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="uyr-vH-oNm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="st8-OH-avn" secondAttribute="leading" id="2Lr-xs-5aL"/>
+                            <constraint firstItem="uyr-vH-oNm" firstAttribute="centerX" secondItem="st8-OH-avn" secondAttribute="centerX" id="Eoy-5l-Hhe"/>
                             <constraint firstItem="Z60-BA-UIT" firstAttribute="top" secondItem="uyr-vH-oNm" secondAttribute="bottom" constant="20" id="MWi-PH-ljA"/>
-                            <constraint firstItem="st8-OH-avn" firstAttribute="trailing" secondItem="uyr-vH-oNm" secondAttribute="trailing" constant="102" id="Sve-eU-jRX"/>
                             <constraint firstItem="Z60-BA-UIT" firstAttribute="leading" secondItem="st8-OH-avn" secondAttribute="leading" id="a5x-pn-dXC"/>
                             <constraint firstItem="uyr-vH-oNm" firstAttribute="top" secondItem="st8-OH-avn" secondAttribute="top" constant="26" id="dei-D1-nfi"/>
                             <constraint firstItem="st8-OH-avn" firstAttribute="trailing" secondItem="Z60-BA-UIT" secondAttribute="trailing" id="vAz-dS-rlg"/>
@@ -196,7 +196,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdv-2K-xdi">
                                         <rect key="frame" x="0.0" y="437.5" width="281.5" height="30"/>
-                                        <state key="normal" title="Go back to the diffriculty menu 🔙"/>
+                                        <state key="normal" title="Go back to the difficulty menu 🔙"/>
                                         <connections>
                                             <segue destination="cEg-k8-sYq" kind="show" id="cvV-g3-DNC"/>
                                         </connections>
