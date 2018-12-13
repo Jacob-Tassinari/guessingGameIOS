@@ -37,7 +37,7 @@ class ViewController: UIViewController {
             highlow.text = "You didn't give me a number."
             return
         }
-        print(randomNumber)
+        //print(randomNumber)// uncomment for testing and recomment when done
         makeAGuess(guess) // running the actual guessing game code
     }
     
