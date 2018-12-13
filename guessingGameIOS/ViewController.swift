@@ -32,7 +32,8 @@ class ViewController: UIViewController {
         restarT()
     }
     @IBAction func buttonwhentapped(_ sender: Any) { // to test if they gave us a number
-        let userInput = textfield.text!
+        let userINput = textfield.text!
+         let userInput = userINput.replacingOccurrences(of: " ", with: "")
         guard let guess = Int(userInput) else {
             highlow.text = "You didn't give me a number."
             return
