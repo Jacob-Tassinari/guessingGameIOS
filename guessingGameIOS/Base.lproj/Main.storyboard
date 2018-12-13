@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
                                         <color key="backgroundColor" red="0.066249616786786647" green="0.14512678065361273" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                        <state key="normal" title="easy">
+                                        <state key="normal" title="Easy">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -52,7 +52,7 @@
                                         <rect key="frame" x="0.0" y="290.5" width="375" height="145"/>
                                         <color key="backgroundColor" red="0.79432480569948183" green="0.0" blue="0.073768915632543314" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                        <state key="normal" title="hard">
+                                        <state key="normal" title="Hard">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
