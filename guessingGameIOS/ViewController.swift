@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
+
     
     //mark: outlets
     @IBOutlet weak var playAgainButton: UIButton! // used to make the button hide and come back
@@ -52,6 +52,7 @@ class ViewController: UIViewController {
     //mark:
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: Selector("endEditing:")))
         // so when you start the game it dosen't set it straight to just 1 - 100 - 5 and actually sends it with the right number of guesses, min, and max
         promt.text = "Please enter a number between \(min) - \(max)"
         guessesRemaining.text = "\(guesses) Guesses remaining 👀"

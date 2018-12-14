@@ -10,6 +10,10 @@ import UIKit
 
 
 class customViewController: UIViewController{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: Selector("endEditing:")))
+    } 
     
     //mark: outlets
     @IBOutlet var labelForMinMax: UILabel!// to give feeback to the player why the input won't work

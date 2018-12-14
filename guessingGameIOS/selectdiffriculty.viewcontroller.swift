@@ -9,7 +9,10 @@
 import UIKit
 
 class selectDiffricultyViewController: UIViewController{
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: Selector("endEditing:")))
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {// to run the right code to get the right diffricullty
         guard let guessingGameViewControlller = segue.destination as? ViewController else{ return }
         switch segue.identifier {
